@@ -8,17 +8,17 @@ Daily 15-30 minute practice toward testing / commissioning / lab engineer roles 
 
 ## Current status
 
-- Level 1 progress: **1 / 28 days**
-- Latest: **Day 01** — hello embedded
-- Active days last 30: **0**
-- Total commits: **0**
+- Level 1 — task folders generated: **2 / 28**
+- Currently working on: **Day 02** — csv read
+- Active commit days (last 30): **1**
+- Total commits: **1**
 - Last update: 2026-04-27
 
 ## Roadmap (high level)
 
 | Level | Focus | Status |
 |-------|-------|--------|
-| 1 — Foundations | Python + Git + sensor data | in progress (1/28) |
+| 1 — Foundations | Python + Git + sensor data | in progress (2/28) |
 | 2 — Industrial Protocols | Modbus, CAN, MQTT | pending |
 | 3 — Firmware Simulation | Arduino/ESP32 in Wokwi, C/C++ | pending |
 | 4 — Real Hardware | ESP32 + sensors, IoT | pending |
@@ -26,9 +26,14 @@ Daily 15-30 minute practice toward testing / commissioning / lab engineer roles 
 
 Full plan: see [`ROADMAP.md`](ROADMAP.md).
 
+## Recent commits
+
+- `0e4168d` 2026-04-27 — Day 0: portfolio scaffolding
+
 ## Days completed
 
 - [Day 01 — hello embedded](projects/level-1-foundations/day-01-hello-embedded/)
+- [Day 02 — csv read](projects/level-1-foundations/day-02-csv-read/)
 
 ## Daily flow
 

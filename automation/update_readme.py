@@ -83,12 +83,12 @@ def build_readme() -> str:
     lines.append("")
     lines.append("## Current status")
     lines.append("")
-    lines.append(f"- Level 1 progress: **{completed} / 28 days**")
+    lines.append(f"- Level 1 — task folders generated: **{completed} / 28**")
     if last_day:
         day_num, slug, _ = last_day
         nice = slug.replace("-", " ")
-        lines.append(f"- Latest: **Day {day_num:02d}** — {nice}")
-    lines.append(f"- Active days last 30: **{active_30}**")
+        lines.append(f"- Currently working on: **Day {day_num:02d}** — {nice}")
+    lines.append(f"- Active commit days (last 30): **{active_30}**")
     lines.append(f"- Total commits: **{total}**")
     lines.append(f"- Last update: {datetime.now().strftime('%Y-%m-%d')}")
     lines.append("")
