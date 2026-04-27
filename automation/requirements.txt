@@ -1,0 +1,20 @@
+# Level 1: stdlib only — no install needed for week 1-2
+# Add as we go. Uncomment when reaching that day.
+
+# Day 03+
+# numpy>=1.24
+
+# Day 04+
+# matplotlib>=3.7
+
+# Week 3+ (Level 1 polish)
+# rich>=13.0       # nice CLI output
+# pytest>=7.0      # tests
+
+# Level 2 (week 5+)
+# pymodbus>=3.5
+# paho-mqtt>=1.6
+
+# Level 4 (real hardware)
+# pyserial>=3.5
+# flask>=2.3

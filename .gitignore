@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / dist
+build/
+dist/
+*.exe
+*.o
+*.bin
+*.elf
+
+# Local data / secrets
+.env
+secrets.json
+*.local
+data/raw/large/
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# C / Embedded build
+*.hex
+*.map
+*.lst
+.pio/
+.platformio/
