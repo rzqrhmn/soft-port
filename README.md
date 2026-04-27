@@ -11,7 +11,7 @@ Daily 15-30 minute practice toward testing / commissioning / lab engineer roles 
 - Level 1 — task folders generated: **2 / 28**
 - Currently working on: **Day 02** — csv read
 - Active commit days (last 30): **1**
-- Total commits: **1**
+- Total commits: **2**
 - Last update: 2026-04-27
 
 ## Roadmap (high level)
@@ -28,6 +28,7 @@ Full plan: see [`ROADMAP.md`](ROADMAP.md).
 
 ## Recent commits
 
+- `85c82b2` 2026-04-27 — Day 01: hello embedded world
 - `0e4168d` 2026-04-27 — Day 0: portfolio scaffolding
 
 ## Days completed
