@@ -73,69 +73,45 @@ def build_readme() -> str:
     active_30 = days_active_last_30()
 
     lines = []
-    lines.append("# Soft — Embedded & Firmware Engineering Portfolio")
+    lines.append("# soft-port")
     lines.append("")
-    lines.append("Daily 15-30 minute practice toward testing / commissioning / lab engineer roles in Germany.")
+    lines.append("Latihan harian saya buat naikin skill Python dan embedded.")
     lines.append("")
-    lines.append("**Background**: 10 years industrial experience (Krakatau Posco — blower plant, large synchronous motors). Currently MSc Electrical Engineering at Hochschule Kempten.")
+    lines.append("Saya 10 tahun kerja di blower plant Krakatau Posco (banyak motor sinkron besar), sekarang nyelesain MSc Electrical Engineering di Hochschule Kempten. Tujuannya: pindah ke role testing / commissioning / lab engineering di Jerman.")
     lines.append("")
-    lines.append("---")
+    lines.append("Targetnya 15-30 menit per hari. Kalau sibuk, skip aja, gak masalah.")
     lines.append("")
-    lines.append("## Current status")
+    lines.append("## Progress")
     lines.append("")
-    lines.append(f"- Level 1 — task folders generated: **{completed} / 28**")
     if last_day:
         day_num, slug, _ = last_day
         nice = slug.replace("-", " ")
-        lines.append(f"- Currently working on: **Day {day_num:02d}** — {nice}")
-    lines.append(f"- Active commit days (last 30): **{active_30}**")
-    lines.append(f"- Total commits: **{total}**")
-    lines.append(f"- Last update: {datetime.now().strftime('%Y-%m-%d')}")
+        lines.append(f"Saat ini di Day {day_num:02d} ({nice}). Total {total} commit, aktif {active_30} hari dalam 30 hari terakhir.")
+    else:
+        lines.append("Belum mulai. Setup baru selesai.")
     lines.append("")
-
-    lines.append("## Roadmap (high level)")
+    lines.append("Plan lengkap ada di [ROADMAP.md](ROADMAP.md).")
     lines.append("")
-    lines.append("| Level | Focus | Status |")
-    lines.append("|-------|-------|--------|")
-    l1_status = "in progress" if 0 < completed < 28 else ("not started" if completed == 0 else "complete")
-    lines.append(f"| 1 — Foundations | Python + Git + sensor data | {l1_status} ({completed}/28) |")
-    lines.append("| 2 — Industrial Protocols | Modbus, CAN, MQTT | pending |")
-    lines.append("| 3 — Firmware Simulation | Arduino/ESP32 in Wokwi, C/C++ | pending |")
-    lines.append("| 4 — Real Hardware | ESP32 + sensors, IoT | pending |")
-    lines.append("| 5 — Capstone | Predictive maintenance edge device | pending |")
-    lines.append("")
-    lines.append("Full plan: see [`ROADMAP.md`](ROADMAP.md).")
-    lines.append("")
-
-    if commits:
-        lines.append("## Recent commits")
-        lines.append("")
-        for h, d, msg in commits:
-            lines.append(f"- `{h}` {d} — {msg}")
-        lines.append("")
 
     if days:
-        lines.append("## Days completed")
+        lines.append("## Folder per hari")
         lines.append("")
         for day_num, slug, path in days:
             nice = slug.replace("-", " ")
             rel = path.relative_to(ROOT).as_posix()
-            lines.append(f"- [Day {day_num:02d} — {nice}]({rel}/)")
+            lines.append(f"- [Day {day_num:02d} - {nice}]({rel}/)")
         lines.append("")
 
-    lines.append("## Daily flow")
-    lines.append("")
-    lines.append("1. Morning: laptop auto-creates today's task folder (Task Scheduler)")
-    lines.append("2. 15-30 min: open the folder, read README, code in main.py")
-    lines.append("3. Before sleep: `python automation/save.py` — commits + pushes")
-    lines.append("4. Sunday 20:00: weekly report auto-generated to `reports/`")
-    lines.append("")
-    lines.append("Setup: see [`SETUP.md`](SETUP.md). Git basics: [`GIT_CHEATSHEET.md`](GIT_CHEATSHEET.md).")
-    lines.append("")
+    if commits:
+        lines.append("## Commit terakhir")
+        lines.append("")
+        for h, d, msg in commits[:5]:
+            lines.append(f"- `{h}` {d} - {msg}")
+        lines.append("")
 
     lines.append("---")
     lines.append("")
-    lines.append("_This README is auto-updated by `automation/update_readme.py`._")
+    lines.append(f"_Last updated: {datetime.now().strftime('%Y-%m-%d')}_")
     lines.append("")
     return "\n".join(lines)
 

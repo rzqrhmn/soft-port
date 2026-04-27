@@ -1,42 +1,25 @@
-# Hi, I'm Rizqia
+# Halo, saya Rizqia
 
-Electrical Engineer transitioning into industrial software & embedded systems.
+Electrical Engineer asal Indonesia, sekarang lagi nyelesain MSc di Hochschule Kempten (Jerman). Sebelumnya 10 tahun kerja di blower plant Krakatau Posco, banyak ngurus motor sinkron besar.
 
-- **MSc Electrical Engineering** (final semester) — Hochschule Kempten
-- **10 years industrial experience** — blower plant operations at Krakatau Posco, including large synchronous motors and supporting systems
-- **Looking for**: testing / commissioning / lab / maintenance engineering roles in Germany
-- **German**: A2 → B2 in progress
+Saya lagi belajar pelan-pelan untuk pindah ke role testing, commissioning, atau lab engineering di Jerman. Repo `soft-port` ini tempat saya nyimpen latihan harian Python dan embedded - pengetahuan motor saya digabung sama tools software modern.
 
-## What I'm building
+Bahasa Jerman saya masih A2, lagi naik ke B2.
 
-I commit to my engineering portfolio every day. Small, real progress.
+## Yang lagi dikerjain
 
-| Project | Focus | Status |
-|---------|-------|--------|
-| [soft-portfolio](https://github.com/USERNAME/soft-portfolio) | Daily Python + embedded practice — sensor data, anomaly detection, industrial protocols, firmware | active |
+[`soft-port`](https://github.com/rzqrhmn/soft-port) - latihan harian, dari Python dasar buat baca data sensor, sampai nanti firmware buat predictive maintenance motor.
 
-> **Why this matters**: bridging 10 years of motor/blower plant experience with modern software & embedded skills. Each project applies industry-relevant ideas (predictive maintenance, condition monitoring, control logic) — not toy problems.
+## Kontak
 
-## Tech I'm working with
-
-- **Python** — data analysis, CLI tools, testing (pytest)
-- **Git / GitHub** — version control, GitHub Actions CI
-- **Industrial protocols** *(in progress)* — Modbus, CAN, MQTT
-- **Embedded** *(in progress)* — Arduino / ESP32, C, Wokwi simulation
-
-## Connect
-
-- [LinkedIn](https://www.linkedin.com/in/USERNAME)
+- LinkedIn: linkedin.com/in/USERNAME
 - Email: rizqia.rahman@yahoo.com
 
 ---
 
-> ## How to use this template
+> Cara pakai template ini:
 >
-> 1. On GitHub, create a new repo with the **same name as your username** (e.g., `rizqia-rahman/rizqia-rahman`). This is a special "profile" repo — its README shows on your profile page.
-> 2. Create README.md in that repo with the content above (delete this `>` quoted section).
-> 3. Replace `USERNAME` with your actual GitHub username in the links.
-> 4. Commit + push.
-> 5. Visit `https://github.com/USERNAME` — your profile now has a proper landing page.
->
-> Recruiters will see this BEFORE clicking into any repo. Make it count.
+> 1. Bikin repo baru di GitHub dengan nama yang **sama dengan username** kamu (misal `rzqrhmn/rzqrhmn`). Repo ini spesial - README-nya muncul di profile page kamu.
+> 2. Copy isi di atas ke README.md repo itu (hapus bagian quoted ini).
+> 3. Ganti link LinkedIn sama yang asli.
+> 4. Push.

@@ -1,28 +1,25 @@
-# Day 02 — Read motor temperature CSV
+# Day 02 - Read motor temperature CSV
 
-**Date created**: 2026-04-27
-**Estimated time**: 15-30 minutes
+Tanggal: 2026-04-27
 
-## Task
+## Yang dikerjain
 
-Read sample_temp.csv (provided) and print each row.
+Baca file `shared/sample_temp.csv` (CSV motor temperature 30 baris), terus print setiap row ke terminal.
 
-## Hints
+## Hint kalau buntu
 
-Use the `csv` module from stdlib. csv.reader(open(path)).
+Pakai modul `csv` dari stdlib. Pattern dasarnya:
 
-## What "done" looks like
+```python
+import csv
+with open(path) as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)
+```
 
-- [ ] Code runs without errors
-- [ ] You understand each line you wrote (no copy-paste-magic)
-- [ ] Brief note added below in `## Reflection`
+Path ke CSV-nya pakai `pathlib.Path(__file__).resolve().parent.parent / "shared" / "sample_temp.csv"` biar script jalan dari folder mana aja.
 
-## Reflection
+## Catatan saya
 
-_(Fill this in when done — even one sentence.)_
-
-What I learned:
-
-What was hard:
-
-What I'd do differently:
+(Diisi pas selesai. Boleh satu kalimat aja.)

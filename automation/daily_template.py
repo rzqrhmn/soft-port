@@ -29,46 +29,33 @@ sys.path.insert(0, str(ROOT / "automation"))
 from roadmap_tasks import get_task, total_days  # noqa: E402
 
 
-README_TEMPLATE = """# Day {day:02d} — {title}
+README_TEMPLATE = """# Day {day:02d} - {title}
 
-**Date created**: {date}
-**Estimated time**: 15-30 minutes
+Tanggal: {date}
 
-## Task
+## Yang dikerjain
 
 {description}
 
-## Hints
+## Hint kalau buntu
 
 {hints}
 
-## What "done" looks like
+## Catatan saya
 
-- [ ] Code runs without errors
-- [ ] You understand each line you wrote (no copy-paste-magic)
-- [ ] Brief note added below in `## Reflection`
-
-## Reflection
-
-_(Fill this in when done — even one sentence.)_
-
-What I learned:
-
-What was hard:
-
-What I'd do differently:
+(Diisi pas selesai. Boleh satu kalimat aja.)
 """
 
 MAIN_PY_TEMPLATE = '''"""
-Day {day:02d} — {title}
+Day {day:02d} - {title}
 
 {description}
 """
 
 
-def main() -> None:
-    # TODO: write your code here
-    print("Day {day:02d}: starter ready. Replace this with your work.")
+def main():
+    # TODO: tulis kode kamu di sini
+    pass
 
 
 if __name__ == "__main__":

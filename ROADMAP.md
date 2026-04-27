@@ -1,127 +1,68 @@
-# Roadmap — Embedded & Firmware Portfolio
+# Roadmap
 
-**Goal**: Build a credible public portfolio for testing / commissioning / lab engineer roles in Germany, with daily 15-30 minute commits.
+Plan saya selama 6 bulan ke depan. Akan banyak yang berubah, tapi setidaknya ada arah.
 
-**Strategy**: Start with Python on laptop (no hardware), slowly add embedded simulation (Wokwi.com — free, runs in browser), only buy hardware when comfortable.
+## Latar belakang singkat
 
-**Total horizon**: 6 months. Daily small steps. Skip days OK — consistency over perfection.
+Saya 10 tahun kerja di blower plant Krakatau Posco, banyak ngurus motor sinkron besar dan sistem pendukungnya. Sekarang lagi nyelesain MSc Electrical Engineering di Hochschule Kempten. Goal saya pindah ke role testing / commissioning / lab engineering di Jerman. Repo ini buat naikin sisi software/embedded saya, biar gak cuma "operator yang ngerti listrik".
 
----
+15-30 menit per hari. Boleh skip, jangan berhenti.
 
-## Level 1 — Foundations (Week 1-4) — Python + Git basics
+## Level 1 - Python dasar pakai data sensor (Bulan 1)
 
-No hardware needed. Goal: comfortable with Git, Python, sensor data files.
+Belum perlu hardware apapun. Tujuannya nyaman pakai Git, Python, dan baca data dari CSV.
 
-| Day | Task | Skill |
-|-----|------|-------|
-| 01 | Hello, embedded world — print sensor name from list | Python lists, git basics |
-| 02 | Read CSV: simulated motor temperature log | csv module, file I/O |
-| 03 | Compute mean / max / min from CSV | numpy basics |
-| 04 | Plot temperature over time | matplotlib |
-| 05 | CLI tool: pass CSV path as argument | argparse |
-| 06 | Detect threshold crossings (alarm logic) | conditionals, logic |
-| 07 | **Mini-project**: motor temp analyzer (combine day 1-6) | refactoring, README |
-| 08 | Generate fake sensor data (random + trend) | random, numpy |
-| 09 | Save sensor data to CSV with timestamps | datetime, csv writer |
-| 10 | Detect anomalies: rolling average + 2σ | numpy rolling stats |
-| 11 | Plot anomalies highlighted in red | matplotlib styling |
-| 12 | Multi-sensor: temperature + vibration + current | dict / class |
-| 13 | Class-based sensor reader | OOP basics |
-| 14 | **Mini-project**: 3-sensor anomaly detector | OOP + analysis |
-| 15-21 | Pick 1: build a temperature-monitor CLI dashboard with `rich` library | TUI |
-| 22-28 | Refactor week: clean code, add tests with `pytest`, write README | testing, docs |
+Minggu 1: baca file CSV motor temperature, hitung mean/max/min, plot pakai matplotlib, bikin CLI tool sederhana.
 
-End of Level 1 goal: 1 polished GitHub repo (`motor-data-analyzer`) with README, tests, screenshots.
+Minggu 2: generate fake sensor data, deteksi anomaly pakai rolling mean + 2 sigma, bikin sensor reader berbasis class.
 
----
+Minggu 3-4: polish dengan Rich library, logging, config file, error handling, type hints. Tambah tests pakai pytest. Setup GitHub Actions buat CI. Beresin README.
 
-## Level 2 — Industrial Protocols (Week 5-8) — talking like real equipment
+Output: 1 repo Python yang lumayan rapi, ada test, ada CI hijau. Bahan ngobrol pas interview kalau ditanya "pernah pakai Python untuk apa?".
 
-Still no hardware. Implement protocols in pure Python — this is a HUGE differentiator for industrial roles.
+## Level 2 - Protokol industrial (Bulan 2)
 
-| Week | Topic | Deliverable |
-|------|-------|-------------|
-| 5 | Modbus RTU frame parser | Decode raw bytes → register values, with CRC check |
-| 6 | Modbus TCP server simulator | Pretend to be a sensor, respond to client requests |
-| 7 | CAN bus message decoder (DBC files) | Parse motor controller CAN frames |
-| 8 | MQTT pub/sub: sensor → broker → dashboard | Use Mosquitto broker locally |
+Masih tanpa hardware. Implementasi protokol komunikasi pabrik di Python murni.
 
-End of Level 2 goal: 2nd repo `industrial-protocols-sandbox` — shows you understand factory floor communication.
+- Parser frame Modbus RTU, termasuk CRC check
+- Modbus TCP server simulator (pura-pura jadi sensor)
+- CAN bus message decoder pakai DBC file
+- MQTT pub/sub pakai broker Mosquitto lokal
 
----
+Ini bagian yang paling jarang dipunya orang fresh dari Python. Kalau interview testing/commissioning, biasanya orang nanya soal Modbus, jadi punya kode yang bisa dipamerkan = nilai plus.
 
-## Level 3 — Firmware Simulation (Week 9-14) — write actual C/C++
+## Level 3 - Firmware simulasi (Bulan 3)
 
-No hardware needed — use **Wokwi.com** (online Arduino/ESP32 simulator). Code runs in browser, you copy to repo.
+Mulai nulis C/C++ untuk Arduino/ESP32, tapi lewat Wokwi.com (gratis, jalan di browser, gak perlu beli apa-apa).
 
-| Week | Topic | Deliverable |
-|------|-------|-------------|
-| 9 | Arduino blink + serial print (Wokwi) | First C code in repo |
-| 10 | Read DHT22 temp sensor in Wokwi | Sensor interfacing |
-| 11 | PWM control — fade LED | Timer/PWM concepts |
-| 12 | State machine in C — traffic light | Embedded patterns |
-| 13 | PID controller in C (compile + run on PC) | Control systems theory → code |
-| 14 | Modbus slave on Arduino (Wokwi) | Combine Level 2 + 3 |
+Minggu pertama: blink LED, serial print, baca sensor DHT22.
+Minggu kedua: PWM untuk fade LED, state machine traffic light.
+Minggu ketiga: PID controller di C, di-compile dan dites di laptop.
+Minggu keempat: Modbus slave di Arduino virtual.
 
-End of Level 3 goal: 3rd repo `firmware-fundamentals` — shows you can write and reason about firmware code.
+## Level 4 - Hardware beneran (Bulan 4-5, opsional)
 
----
+Beli ESP32 dev board (~10 EUR di Reichelt), DHT22 sensor (~3 EUR), breadboard kit. Total sekitar 25-30 EUR.
 
-## Level 4 — Real Hardware (Week 15-20) — optional but huge boost
+Bikin temperature monitor: ESP32 baca sensor, kirim ke MQTT broker, dashboard web kecil pakai Flask, log ke SQLite, alert email kalau lewat threshold.
 
-Buy: **ESP32 dev board (~10 EUR) + DHT22 sensor (~3 EUR) + breadboard kit (~10 EUR)**. Total ~25-30 EUR from Reichelt or Amazon.de.
+Bagian penting: foto dokumentasi rangkaiannya, masukin ke README. Recruiter Jerman seneng lihat orang yang beneran solder dan rapikan kabel.
 
-Why this matters in Germany: real hardware photos in your README = recruiter sees you actually built things.
+## Level 5 - Capstone: condition monitoring motor (Bulan 6)
 
-| Week | Topic | Deliverable |
-|------|-------|-------------|
-| 15 | ESP32 + DHT22 — read temperature | Photo + serial output in README |
-| 16 | Send via WiFi to MQTT broker | Networking on embedded |
-| 17 | Web dashboard (Flask) showing live data | Full stack mini |
-| 18 | Log data to SQLite | Persistence |
-| 19 | Email alert on threshold (SMTP) | Real-world usefulness |
-| 20 | Open Source: publish as proper repo with docs | Polish |
+Ini yang paling nyambung sama pengalaman saya. ESP32 + accelerometer MPU6050 (~5 EUR) ditempel ke kipas atau motor kecil. Baca data getaran, latih model klasifikasi sederhana di laptop (normal vs unbalanced vs bearing aus), deploy modelnya ke ESP32 pakai TF Lite Micro. Alert via MQTT.
 
-End of Level 4 goal: 4th repo `iot-temp-monitor` — your strongest portfolio piece. With photos.
+Kalau jadi, ini cerita interview yang bagus: "Pengalaman 10 tahun saya di motor industrial saya gabungkan dengan ML edge device. Begini implementasinya."
 
----
+## Yang saya harapin di akhir 6 bulan
 
-## Level 5 — Capstone (Week 21-26) — predictive maintenance edge device
+- 5 repo public di GitHub yang isinya kode beneran, ada test, ada README
+- Sekitar 100-150 hari commit (skip OK, gak fanatik 365 days)
+- Satu artikel LinkedIn yang nyeritain capstone project
+- Sebuah portfolio yang bisa saya tunjukin ke HR Jerman tanpa malu
 
-This is the project that gets you interviews.
+Itu udah cukup buat tembus screening Werkstudent / Praktikum / junior testing role. Sisanya tergantung interview.
 
-**Concept**: ESP32 reads vibration (accelerometer MPU6050, ~5 EUR) from a small motor (you can use an old fan), runs simple ML on edge (TensorFlow Lite Micro), classifies: normal / unbalanced / bearing wear. Alerts via MQTT.
+## Catatan
 
-Direct connection to your 10 years at Krakatau Posco with synchronous motors → this is your story.
-
-| Week | Task |
-|------|------|
-| 21 | Collect baseline vibration data from a fan (your laptop fan works!) |
-| 22 | Label data: normal vs simulated faults |
-| 23 | Train tiny ML model (scikit-learn → TF Lite) |
-| 24 | Deploy model on ESP32 |
-| 25 | Build alert system + dashboard |
-| 26 | Write proper README + LinkedIn post explaining the project |
-
-End of Level 5 goal: capstone repo `motor-condition-monitor` + LinkedIn article + portfolio website (GitHub Pages, free).
-
----
-
-## After 6 months you have:
-
-- 5 public GitHub repos with real code, tests, READMEs
-- ~150-180 days of green squares (real)
-- Portfolio website
-- LinkedIn article showing engineering thinking
-- Story for German interviews: "I built X to apply my motor experience"
-
-This is what gets you past CV screening for Werkstudent / Praktikum / Junior testing roles.
-
----
-
-## Adjustments
-
-- Stuck on a day? Skip and come back. Better than burning out.
-- Day too easy? Push to next day same session — banking days for thesis crunch time is fine.
-- Concept unclear? Each day's `README.md` has links to free resources.
-- Need to pause? Disable scheduled tasks (see SETUP.md). Resume any time.
+Roadmap ini bukan kontrak. Kalau di tengah jalan saya nemu hal yang lebih menarik atau lebih relevan ke job posting yang saya incar, saya geser. Yang penting: ada output public tiap minggu.
