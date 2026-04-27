@@ -1,12 +1,10 @@
 # Roadmap
 
-Plan saya selama 6 bulan ke depan. Akan banyak yang berubah, tapi setidaknya ada arah.
+Plan 6 bulan ke depan.
 
 ## Latar belakang singkat
 
-Saya 10 tahun kerja di blower plant Krakatau Posco, banyak ngurus motor sinkron besar dan sistem pendukungnya. Sekarang lagi nyelesain MSc Electrical Engineering di Hochschule Kempten. Goal saya pindah ke role testing / commissioning / lab engineering di Jerman. Repo ini buat naikin sisi software/embedded saya, biar gak cuma "operator yang ngerti listrik".
-
-15-30 menit per hari. Boleh skip, jangan berhenti.
+Belajar hal baru
 
 ## Level 1 - Python dasar pakai data sensor (Bulan 1)
 
