@@ -1,16 +1,9 @@
 # soft-port
 
-Latihan harian saya buat naikin skill Python dan embedded.
-
-Saya 10 tahun kerja di blower plant Krakatau Posco (banyak motor sinkron besar), sekarang nyelesain MSc Electrical Engineering di Hochschule Kempten. Tujuannya: pindah ke role testing / commissioning / lab engineering di Jerman.
-
-Targetnya 15-30 menit per hari. Kalau sibuk, skip aja, gak masalah.
+Latihan programming.
 
 ## Progress
-
-Saat ini di Day 02 (csv read). Total 3 commit, aktif 1 hari dalam 30 hari terakhir.
-
-Plan lengkap ada di [ROADMAP.md](ROADMAP.md).
+seoga konsisten
 
 ## Folder per hari
 
